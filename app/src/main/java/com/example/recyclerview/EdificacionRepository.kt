@@ -13,4 +13,6 @@ class EdificacionRepository(private val context: Context) {
         val listType = object : TypeToken<List<Edificacion>>() {}.type
         return Gson().fromJson(json, listType)
     }
+
+    //aqui va la funcion para cargar datos desde Room, devolver List<Edificacion>
 }
