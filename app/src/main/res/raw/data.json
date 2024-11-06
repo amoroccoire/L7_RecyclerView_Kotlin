@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Catedral de Arequipa",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Catedral_de_Arequipa.jpg",
+    "categoria": "Religion",
+    "descripcion": "Considerada uno de los primeros monumentos religiosos del siglo XVII en Arequipa"
+  },
+  {
+    "titulo": "Iglesia de la Compañía",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Iglesia_de_la_Compa%C3%B1%C3%ADa%2C_Arequipa.jpg/1280px-Iglesia_de_la_Compa%C3%B1%C3%ADa%2C_Arequipa.jpg",
+    "categoria": "Religion",
+    "descripcion": "Ejemplo destacado de la llamada arquitectura barroca andina"
+  },
+  {
+    "titulo": "Casa del Moral",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Casa_del_Moral_2009.jpg",
+    "categoria": "Museo",
+    "descripcion": "Construida alrededor de 1730. Actualmente es utilizado como galería de exposiciones"
+  }
+]
