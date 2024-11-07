@@ -9,8 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class EdificacionAdapter(
-    private val edificaciones: List<Edificacion>
+    private var edificaciones: List<Edificacion>
 ) : RecyclerView.Adapter<EdificacionAdapter.EdificacionViewHolder>() {
+
+    fun updateData(newData: List<Edificacion>) {
+        this.edificaciones = newData
+        notifyDataSetChanged()
+    }
+
     class EdificacionViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val imgEdificacion: ImageView = itemView.findViewById(R.id.imageView2)
         val titleEdificacion: TextView = itemView.findViewById(R.id.txtTitle)
@@ -33,7 +39,6 @@ class EdificacionAdapter(
         holder.catEdificacion.text = edificacion.categoria
         holder.desEdificacion.text = edificacion.descripcion
 
-        // Cargar la imagen
         Glide.with(holder.itemView.context)
             .load(edificacion.imagenUrl)
             .into(holder.imgEdificacion)

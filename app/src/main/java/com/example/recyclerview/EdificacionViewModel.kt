@@ -7,7 +7,23 @@ class EdificacionViewModel(private val repository: EdificacionRepository) : View
     private val _edificaciones = MutableLiveData<List<Edificacion>>()
     val edificaciones: LiveData<List<Edificacion>> get() = _edificaciones
 
+    private var fullList: List<Edificacion> = listOf()  // Guardamos la lista completa
+
     fun loadEdificaciones() {
-        _edificaciones.value = repository.getEdificacionesFromJson()
+        fullList = repository.getEdificacionesFromJson()  // Cargar los datos completos
+        _edificaciones.value = fullList
+    }
+
+    fun filterEdificaciones(query: String) {
+        if (query.isEmpty()) {
+            _edificaciones.value = fullList
+        } else {
+            val filteredList = fullList.filter { edificacion ->
+                edificacion.titulo.lowercase().contains(query) ||
+                        edificacion.descripcion.lowercase().contains(query) ||
+                        edificacion.categoria.lowercase().contains(query)
+            }
+            _edificaciones.value = filteredList
+        }
     }
 }
